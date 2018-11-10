@@ -19,7 +19,7 @@ export interface MenuItem {
   templateUrl: 'app.html'
 })
 
-export class MyApp {
+export class GymJaoApp {
   @ViewChild(Nav) nav: Nav;
 
   rootPage: any = LoginPage;

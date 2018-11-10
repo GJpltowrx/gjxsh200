@@ -12,7 +12,7 @@ import {ActivityService} from "../services/activity-service";
 import {TripService} from "../services/trip-service";
 import {WeatherProvider} from "../services/weather";
 
-import {MyApp} from "./app.component";
+import {GymJaoApp} from "./app.component";
 
 import {SettingsPage} from "../pages/settings/settings";
 import {CheckoutTripPage} from "../pages/checkout-trip/checkout-trip";
@@ -34,7 +34,7 @@ import {LocalWeatherPage} from "../pages/local-weather/local-weather";
 
 @NgModule({
   declarations: [
-    MyApp,
+    GymJaoApp,
     SettingsPage,
     CheckoutTripPage,
     HomePage,
@@ -49,7 +49,7 @@ import {LocalWeatherPage} from "../pages/local-weather/local-weather";
   imports: [
     BrowserModule,
     HttpClientModule,
-    IonicModule.forRoot(MyApp, {
+    IonicModule.forRoot(GymJaoApp, {
       scrollPadding: false,
       scrollAssist: true,
       autoFocusAssist: false
@@ -61,7 +61,7 @@ import {LocalWeatherPage} from "../pages/local-weather/local-weather";
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    MyApp,
+    GymJaoApp,
     SettingsPage,
     CheckoutTripPage,
     HomePage,
