@@ -4,7 +4,6 @@ import {Storage} from '@ionic/storage';
 
 import {NotificationsPage} from "../notifications/notifications";
 import {SettingsPage} from "../settings/settings";
-import {TripsPage} from "../trips/trips";
 import {SearchLocationPage} from "../search-location/search-location";
 
 
@@ -24,8 +23,6 @@ export class HomePage {
   }
 
   ionViewWillEnter() {
-    // this.search.pickup = "Rio de Janeiro, Brazil";
-    // this.search.dropOff = "Same as pickup";
     this.storage.get('pickup').then((val) => {
       if (val === null) {
         this.search.name = "Rio de Janeiro, Brazil"
@@ -39,7 +36,7 @@ export class HomePage {
 
   // go to result page
   doSearch() {
-    this.nav.push(TripsPage);
+   // this.nav.push(TripsPage);
   }
 
   // choose place

@@ -15,15 +15,11 @@ import {WeatherProvider} from "../services/weather";
 import {GymJaoApp} from "./app.component";
 
 import {SettingsPage} from "../pages/settings/settings";
-import {CheckoutTripPage} from "../pages/checkout-trip/checkout-trip";
 import {HomePage} from "../pages/home/home";
 import {LoginPage} from "../pages/login/login";
 import {NotificationsPage} from "../pages/notifications/notifications";
 import {RegisterPage} from "../pages/register/register";
 import {SearchLocationPage} from "../pages/search-location/search-location";
-import {TripDetailPage} from "../pages/trip-detail/trip-detail";
-import {TripsPage} from "../pages/trips/trips";
-import {LocalWeatherPage} from "../pages/local-weather/local-weather";
 
 // import services
 // end import services
@@ -36,15 +32,11 @@ import {LocalWeatherPage} from "../pages/local-weather/local-weather";
   declarations: [
     GymJaoApp,
     SettingsPage,
-    CheckoutTripPage,
     HomePage,
     LoginPage,
-    LocalWeatherPage,
     NotificationsPage,
     RegisterPage,
-    SearchLocationPage,
-    TripDetailPage,
-    TripsPage
+    SearchLocationPage
   ],
   imports: [
     BrowserModule,
@@ -63,15 +55,11 @@ import {LocalWeatherPage} from "../pages/local-weather/local-weather";
   entryComponents: [
     GymJaoApp,
     SettingsPage,
-    CheckoutTripPage,
     HomePage,
     LoginPage,
-    LocalWeatherPage,
     NotificationsPage,
     RegisterPage,
-    SearchLocationPage,
-    TripDetailPage,
-    TripsPage
+    SearchLocationPage
   ],
   providers: [
     StatusBar,
