@@ -19,6 +19,7 @@ import {HomePage} from '../pages/home/home';
 import {LoginPage} from "../pages/login/login";
 import {NotificationsPage} from '../pages/notifications/notifications';
 import {RegisterPage} from '../pages/register/register';
+import {ExploreNeighbourhoodPage} from '../pages/explore-neighbourhood/explore-neighbourhood';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import {RegisterPage} from '../pages/register/register';
     HomePage,
     LoginPage,
     NotificationsPage,
-    RegisterPage
+    RegisterPage,
+    ExploreNeighbourhoodPage
   ],
   imports: [
     BrowserModule,
@@ -49,7 +51,8 @@ import {RegisterPage} from '../pages/register/register';
     HomePage,
     LoginPage,
     NotificationsPage,
-    RegisterPage
+    RegisterPage,
+    ExploreNeighbourhoodPage
   ],
   providers: [
     StatusBar,
