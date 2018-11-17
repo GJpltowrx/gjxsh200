@@ -8,25 +8,17 @@ import {StatusBar} from '@ionic-native/status-bar';
 import {SplashScreen} from '@ionic-native/splash-screen';
 import {Keyboard} from '@ionic-native/keyboard';
 
-import {ActivityService} from "../services/activity-service";
-import {TripService} from "../services/trip-service";
-import {WeatherProvider} from "../services/weather";
+import {ActivityService} from '../services/activity-service';
+import {TripService} from '../services/trip-service';
+import {WeatherProvider} from '../services/weather';
 
-import {GymJaoApp} from "./app.component";
+import {GymJaoApp} from './app.component';
 
-import {SettingsPage} from "../pages/settings/settings";
-import {HomePage} from "../pages/home/home";
+import {SettingsPage} from '../pages/settings/settings';
+import {HomePage} from '../pages/home/home';
 import {LoginPage} from "../pages/login/login";
-import {NotificationsPage} from "../pages/notifications/notifications";
-import {RegisterPage} from "../pages/register/register";
-import {SearchLocationPage} from "../pages/search-location/search-location";
-
-// import services
-// end import services
-// end import services
-
-// import pages
-// end import pages
+import {NotificationsPage} from '../pages/notifications/notifications';
+import {RegisterPage} from '../pages/register/register';
 
 @NgModule({
   declarations: [
@@ -35,8 +27,7 @@ import {SearchLocationPage} from "../pages/search-location/search-location";
     HomePage,
     LoginPage,
     NotificationsPage,
-    RegisterPage,
-    SearchLocationPage
+    RegisterPage
   ],
   imports: [
     BrowserModule,
@@ -58,8 +49,7 @@ import {SearchLocationPage} from "../pages/search-location/search-location";
     HomePage,
     LoginPage,
     NotificationsPage,
-    RegisterPage,
-    SearchLocationPage
+    RegisterPage
   ],
   providers: [
     StatusBar,

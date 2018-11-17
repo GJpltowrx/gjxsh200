@@ -1,12 +1,12 @@
-import { Component, ViewChild } from "@angular/core";
-import { Platform, Nav } from "ionic-angular";
-
+import { Component, ViewChild } from '@angular/core';
+import { Platform, Nav } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { Keyboard } from '@ionic-native/keyboard';
 
 import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
+import { ExploreNeighbourhoodPage } from '../pages/explore-neighbourhood/explore-neighbourhood'
 
 export interface MenuItem {
     title: string;
@@ -34,8 +34,8 @@ export class GymJaoApp {
     this.initializeApp();
 
     this.appMenuItems = [
-      {title: 'Home', component: HomePage, icon: 'home'}
-    //  {title: 'Local Weather', component: LocalWeatherPage, icon: 'partly-sunny'}
+      {title: 'Home', component: HomePage, icon: 'home'},
+      {title: 'Explore Gyms Near me', component: ExploreNeighbourhoodPage, icon: 'search'}
     ];
   }
 

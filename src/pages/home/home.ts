@@ -1,10 +1,9 @@
-import {Component} from "@angular/core";
-import {NavController, PopoverController} from "ionic-angular";
+import {Component} from '@angular/core';
+import {NavController, PopoverController} from 'ionic-angular';
 import {Storage} from '@ionic/storage';
 
-import {NotificationsPage} from "../notifications/notifications";
-import {SettingsPage} from "../settings/settings";
-import {SearchLocationPage} from "../search-location/search-location";
+import {NotificationsPage} from '../notifications/notifications';
+import {SettingsPage} from '../settings/settings';
 
 
 @Component({
@@ -13,7 +12,6 @@ import {SearchLocationPage} from "../search-location/search-location";
 })
 
 export class HomePage {
-  // search condition
   public search = {
     name: "Rio de Janeiro, Brazil",
     date: new Date().toISOString()
@@ -33,18 +31,15 @@ export class HomePage {
       console.log(err)
     });
   }
-
-  // go to result page
   doSearch() {
    // this.nav.push(TripsPage);
   }
 
   // choose place
   choosePlace(from) {
-    this.nav.push(SearchLocationPage, from);
+    //this.nav.push(SearchLocationPage, from);
   }
 
-  // to go account page
   goToAccount() {
     this.nav.push(SettingsPage);
   }
@@ -56,7 +51,4 @@ export class HomePage {
       ev: myEvent
     });
   }
-
 }
-
-//
