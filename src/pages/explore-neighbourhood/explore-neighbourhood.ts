@@ -1,25 +1,63 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Component, ViewChild, ElementRef } from '@angular/core';
+import { NavController, Platform } from 'ionic-angular';
+import { Geolocation } from '@ionic-native/geolocation';
 
-/**
- * Generated class for the ExploreNeighbourhoodPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+declare var google;
 
-@IonicPage()
 @Component({
   selector: 'page-explore-neighbourhood',
   templateUrl: 'explore-neighbourhood.html',
 })
 export class ExploreNeighbourhoodPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  @ViewChild('map') mapElement: ElementRef;
+  map: any;
+  constructor(public navCtrl: NavController, private geolocation: Geolocation, private patform: Platform) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ExploreNeighbourhoodPage');
+    this.loadMap();
   }
 
+  loadMap(): any {
+  this.patform.ready().then(()=>{
+    // let options = {
+    //   timeout: 30000,
+    //   enableHighAccuracy: true
+    //   };
+      this.geolocation.getCurrentPosition().then((position) => {
+         let latLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+
+        let mapOptions = {
+          center: latLng,
+          zoom: 15,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+
+        this.map = new google.maps.Map(this.mapElement.nativeElement, mapOptions);
+
+     }, (err) => {
+       alert(err.message);
+     });
+    });
+  }
+
+  addMarker() {
+    let marker = new google.maps.Marker({
+      map: this.map,
+      animation: google.maps.Animation.DROP,
+      position: this.map.getCenter()
+    });
+    let content = "<h4>Information!</h4>";
+    this.addInfoWindow(marker, content);
+  }
+
+  addInfoWindow(marker: any, content: string): any {
+    let infoWindow = new google.maps.InfoWindow({
+      content: content
+    });
+
+    google.maps.event.addListener(marker, 'click', () => {
+      infoWindow.open(this.map, marker);
+    });
+  }
 }

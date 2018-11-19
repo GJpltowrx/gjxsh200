@@ -7,6 +7,7 @@ import {IonicStorageModule} from '@ionic/storage';
 import {StatusBar} from '@ionic-native/status-bar';
 import {SplashScreen} from '@ionic-native/splash-screen';
 import {Keyboard} from '@ionic-native/keyboard';
+import { Geolocation } from '@ionic-native/geolocation';
 
 import {ActivityService} from '../services/activity-service';
 import {TripService} from '../services/trip-service';
@@ -60,7 +61,8 @@ import {ExploreNeighbourhoodPage} from '../pages/explore-neighbourhood/explore-n
     Keyboard,
     ActivityService,
     TripService,
-    WeatherProvider
+    WeatherProvider,
+    Geolocation
   ]
 })
 
